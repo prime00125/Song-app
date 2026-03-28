@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #060e20;
+  --color-surface: #060e20;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #091328;
+  --color-surface-container: #0f1930;
+  --color-surface-container-high: #141f38;
+  --color-surface-container-highest: #192540;
+  --color-on-surface: #dee5ff;
+  --color-on-surface-variant: #a3aac4;
+  --color-primary: #cc97ff;
+  --color-primary-dim: #9c48ea;
+  --color-on-primary: #47007c;
+  --color-secondary: #53ddfc;
+  --color-secondary-dim: #40ceed;
+  --color-tertiary: #ff86c3;
+  --color-tertiary-dim: #f271b5;
+  --color-outline: #6d758c;
+  --color-outline-variant: #40485d;
+  
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .bg-mesh {
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(204, 151, 255, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(83, 221, 252, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(255, 134, 195, 0.1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(156, 72, 234, 0.15) 0px, transparent 50%);
+  }
+  .glass-panel {
+    background: rgba(25, 37, 64, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
